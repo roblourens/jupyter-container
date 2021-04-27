@@ -2,7 +2,7 @@ FROM jupyter/scipy-notebook
 
 RUN conda install --quiet --yes -c nglview k3d drawdata vega-datasets altair plotly ipyleaflet bokeh
 RUN conda install --quiet --yes -c conda-forge vega_datasets
-RUN python -m pip install drawdata
+RUN python -m pip install drawdata -q
 
 # [Option] Install Node.js
 ARG INSTALL_NODE="true"
